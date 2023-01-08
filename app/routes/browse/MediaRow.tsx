@@ -1,5 +1,9 @@
 const MediaItem = ({ title, img_url }) => {
-  return <div className="mx-2 h-40 w-80 bg-red-300">{title}</div>;
+  return (
+    <div key={title} className="mr-2 h-40 w-80 bg-red-300">
+      {title}
+    </div>
+  );
 };
 
 const MediaRow = () => {
@@ -15,8 +19,8 @@ const MediaRow = () => {
     placeholderContent,
   ];
   return (
-    <div className="">
-      <h1>hallo</h1>
+    <div className="mb-12">
+      <h3 className="w-full text-amber-50">title</h3>
       <div className="flex flex-row">
         {placeholders.map((mediaItem) => (
           <MediaItem {...mediaItem} />
