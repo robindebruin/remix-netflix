@@ -1,4 +1,6 @@
-const MediaItem = ({ title, img_url }) => {
+import { MediaWheel } from ".";
+
+const MediaItem = ({ title, img_url, genre }) => {
   return (
     <div key={title} className="mr-2 h-40 w-80 bg-red-300">
       {title}
@@ -6,24 +8,16 @@ const MediaItem = ({ title, img_url }) => {
   );
 };
 
-const MediaRow = () => {
-  const placeholderContent = {
-    title: "foo",
-    img_url: "blalal.img",
-    genre: ["thriller"],
-  };
-  const placeholders = [
-    placeholderContent,
-    placeholderContent,
-    placeholderContent,
-    placeholderContent,
-  ];
+type MediaRowProps = { data: MediaWheel };
+const MediaRow = (data: MediaRowProps) => {
+  const placeholders = [""];
   return (
     <div className="mb-12">
-      <h3 className="w-full text-amber-50">title</h3>
+      <h3 className="w-full text-amber-50">title: {JSON.stringify(data)}</h3>
       <div className="flex flex-row">
         {placeholders.map((mediaItem) => (
-          <MediaItem {...mediaItem} />
+          //   <MediaItem {...mediaItem} />
+          <></>
         ))}
       </div>
     </div>

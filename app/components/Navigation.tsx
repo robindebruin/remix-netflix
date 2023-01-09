@@ -8,7 +8,7 @@ const Navigation = () => (
   <nav className="flex items-center justify-between bg-gradient-to-b from-gray-800 to-transparent px-4 py-3">
     <div className="mr-6 flex flex-shrink-0 items-center text-white">
       <img src="/logo.png" className="h-8 w-8" alt="Logo" />
-      <span className="text-xl font-semibold tracking-tight">My Site</span>
+      <span className="text-xl font-semibold tracking-tight">Netflix</span>
     </div>
     <div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
       <div className="text-sm lg:flex-grow">
